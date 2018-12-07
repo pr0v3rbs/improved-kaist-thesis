@@ -1171,8 +1171,8 @@ pdfpagelabels, %HOCHEOL MODIFIED
 			\@gradYear 년.           % 졸업년도
 			\@lastPage+\@lastRomanPage~쪽.                           % 총 페이지 수 -> 참고문헌 끝
 			\@ifundefined{@advisorCooprEng}         % 공동지도교수 유무판정
-			{지도교수: \@advisorMajorKorCont.} % 단독지도교수 한글이름
-			{지도교수: \@advisorMajorKorCont, % 공동 주 지도교수 한글이름
+			{지도교수: \@advisorMajorKor.} % 단독지도교수 한글이름
+			{지도교수: \@advisorCooprKor,  % 공동 주 지도교수 한글이름
 				~\@advisorCooprKorCont.}         % 공동 부 지도교수 한글이름
 			\ifthenelse{\boolean{@isKorean}}
 			{(한글 논문)}{(영문 논문)} \\              % 본문이 영어인 경우 명시
@@ -1183,8 +1183,8 @@ pdfpagelabels, %HOCHEOL MODIFIED
 			\@lastPage+\@lastRomanPage~pages.                           % 총 페이지 수 -> 참고문헌 끝
 			\@ifundefined{@advisorCooprEng}         % 공동지도교수 유무판정
 			{Advisor: \@advisorMajorEng.} % 단독지도교수 영문이름
-			{Advisor: \@advisorMajorEng, % 공동 주 지도교수 영문이름
-				~\@advisorCooprEng.}         % 공동 부 지도교수 영문이름
+			{Advisor: \@advisorCooprEng,  % 공동 주 지도교수 영문이름
+				~\@advisorCooprEngCont.}         % 공동 부 지도교수 영문이름
 			\ifthenelse{\boolean{@isKorean}}
 			{(Text in Korean)}{(Text in English)}               % 본문이 한글인 경우 명시
 		\end{minipage}}\\[16pt] \if@PDFdoc\phantomsection\fi}
